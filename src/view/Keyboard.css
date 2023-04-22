@@ -1,0 +1,9 @@
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 50px [col-start]);
+}
+
+.key {
+    text-align: center;
+    height: 50px;
+}
