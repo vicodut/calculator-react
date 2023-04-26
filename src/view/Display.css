@@ -1,4 +1,38 @@
 .display {
-    border: 1px solid red;
-    
+    height: 18vh;
+    font-size: 3.5vh;
+
+    background-color: rgba(33, 37, 55, 1);
+    position: relative;
+
+    padding: 8px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.display .buffer {
+    font-size: 2vh;
+    position: absolute;
+    bottom: 4.5vh;
+    text-align: right;
+    width: 100%;
+    padding: inherit;
+    width: -webkit-fill-available;
+}
+
+.display .text {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
+    padding: inherit;
+    width: -webkit-fill-available;
+}
+
+.number {
+    color: rgba(254, 254, 254, 1);
+}
+
+.action {
+    color: rgba(232, 122, 122, 1);
 }

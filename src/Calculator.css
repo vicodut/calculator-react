@@ -6,7 +6,12 @@
 }
 
 .calculator {
-  width: 200px;
-  border: 1px solid green;
+  width: 36vw;
   position: relative;
+
+  background-color: rgba(33, 37, 55, 1);
+
+  border-radius: 32px 32px 32px 32px;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px rgba(41, 45, 55, .5);
 }

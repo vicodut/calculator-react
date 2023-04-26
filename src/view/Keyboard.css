@@ -1,9 +1,52 @@
 .keyboard {
+    /* border: 1px solid blue; */
+    border-radius: 32px 32px 0 0;
+
+    padding: 0 2vw 2vw 2vw;
+
+    /* background: linear-gradient(0deg, rgba(54, 62, 60, 1), 0%, rgba(6, 7, 9, 1), 100%); */
+    background: linear-gradient(180deg, rgb(46 51 63) 0%, rgba(41, 45, 55, 1) 40%);
+
     display: grid;
-    grid-template-columns: repeat(4, 50px [col-start]);
+    grid-template-columns: repeat(4, 8vw [col-start]);
 }
 
 .key {
     text-align: center;
-    height: 50px;
+    height: 8vw;
+    padding: 8px;
+    box-sizing: border-box;
+    color: rgba(254, 254, 254, 1);
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.key .btn {
+    display: block;
+    border-radius: 8px;
+    height: -webkit-fill-available;
+    background-color: rgba(33, 37, 55, 1);
+    cursor: pointer;
+}
+
+.key .btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 200%;
+    border: 1px solid red;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.btn span {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.action {
+    color: rgba(232, 122, 122, 1);
 }

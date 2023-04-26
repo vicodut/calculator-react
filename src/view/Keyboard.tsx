@@ -1,31 +1,30 @@
-import { useState } from 'react'
 import './Keyboard.css'
+import Key from './Key'
 
-function Calculator({handleClick}) {
-  const [count, setCount] = useState(0)
-
+function Calculator({handleKey}) {
   return (
     <>
       <div className='keyboard'>
-        <div className="key" onClick={() => handleClick(7)}>7</div>
-        <div className="key" onClick={() => handleClick(8)}>8</div>
-        <div className="key" onClick={() => handleClick(9)}>9</div>
-        <div className="key" onClick={() => handleClick('/')}>/</div>
+          <Key value='7' onClick={(e) => handleKey(e)} />
+          <Key value='8' onClick={(e) => handleKey(e)} />
+          <Key value='9' onClick={(e) => handleKey(e)} />
+          <Key value='/' type='action' onClick={(e) => handleKey(e)}/>
         
-        <div className="key" onClick={() => handleClick(4)}>4</div>
-        <div className="key" onClick={() => handleClick(5)}>5</div>
-        <div className="key" onClick={() => handleClick(6)}>6</div>
-        <div className="key" onClick={() => handleClick('x')}>x</div>
+          <Key value='4' onClick={(e) => handleKey(e)} />
+          <Key value='5' onClick={(e) => handleKey(e)} />
+          <Key value='6' onClick={(e) => handleKey(e)} />
+          <Key value='x' type='action' onClick={(e) => handleKey(e)} />
         
-        <div className="key" onClick={() => handleClick(1)}>1</div>
-        <div className="key" onClick={() => handleClick(2)}>2</div>
-        <div className="key" onClick={() => handleClick(3)}>3</div>
-        <div className="key" onClick={() => handleClick('-')}>-</div>
+          <Key value='1' onClick={(e) => handleKey(e)} />
+          <Key value='2' onClick={(e) => handleKey(e)} />
+          <Key value='3' onClick={(e) => handleKey(e)} />
+          <Key value='-' type='action' onClick={(e) => handleKey(e)} />
         
-        <div className="key" onClick={() => handleClick(0)}>0</div>
-        <div className="key" onClick={() => handleClick('.')}>.</div>
-        <div className="key" onClick={() => handleClick('=')}>=</div>
-        <div className="key" onClick={() => handleClick('+')}>+</div>
+          <Key value='0' onClick={(e) => handleKey(e)} />
+          <Key value='.' onClick={(e) => handleKey(e)} />
+          <Key value='=' type='action' onClick={(e) => handleKey(e)} />
+          <Key value='+' type='action' onClick={(e) => handleKey(e)} />
+          <Key value='AC' type='action' onClick={(e) => handleKey(e)} />
       </div>
     </>
   )
